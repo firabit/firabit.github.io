@@ -249,14 +249,22 @@
 						<div style="font-size: 14px; background-color: #3AAEE0; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" class="bee-button-content"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: normal;">Button</span></div>
 					</div>
 					<div class="bee-block bee-block-2 bee-form">
-						<form accept-charset="utf-8" class="creatio-form" action="https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c" autocomplete="true" enctype="" method="POST" novalidate target="">
-							<div class="bee-form-row bee-form-row-multicolumn">
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Email</label><input id="r0c0m1i1" name="email" type="email"></div>
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Password</label><input id="r0c0m1i1" name="password" type="password"></div>
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1"> </label>
-									<div class="bee-button-container"><button id="r0c0m1i1" name="submit" type="submit" value="Login">Login</button></div>
+						<form accept-charset="utf-8" action="" autocomplete="true" enctype="" method="POST" novalidate="" target="">
+							<div class="bee-form-row">
+								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">First name</label><input id="r0c0m1i1" name="FirstName" type="text"></div>
+							</div>
+							<div class="bee-form-row">
+								<div class="bee-field bee-field-r0c0m1i2"><label for="r0c0m1i2">Last name</label><input id="r0c0m1i2" name="LastName" type="text"></div>
+							</div>
+							<div class="bee-form-row">
+								<div class="bee-field bee-field-r0c0m1i3"><label for="r0c0m1i3">Email</label><input id="r0c0m1i3" name="Email" type="email"></div>
+							</div>
+							<div class="bee-form-row">
+								<div class="bee-field bee-field-r0c0m1i4">
+									<div class="bee-button-container"><button id="r0c0m1i4" name="submit" type="submit" value="Submit">Submit</button></div>
 								</div>
 							</div>
+							<div class="bee-form-row"><input id="r0c0m1i5" name="EntityName" type="hidden" value="FormSubmit"></div>
 						</form>
 					</div>
 				</div>
@@ -265,9 +273,9 @@
 	</div>
 	<script>
 	  const formAction='https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c';
-	  const formsCollection = document.getElementsByClassName("creatio-form");
+	  const formsCollection = document.getElementsByClassName("bee-form");
 	  for (let i = 0; i < formsCollection.length; i++) {
-	    const form = formsCollection[i];
+	    const form = formsCollection[i].firstChild;
 	    form?.addEventListener('submit', async (e) => {
 		  e.preventDefault();
 		  const formData = new FormData(e.target);
