@@ -275,7 +275,7 @@
 	  const formAction='https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c';
 	  const formsCollection = document.getElementsByClassName("bee-form");
 	  for (let i = 0; i < formsCollection.length; i++) {
-	    const form = formsCollection[i].firstChild;
+	    const form = formsCollection[i].firstElementChild;
 	    form?.addEventListener('submit', async (e) => {
 		  e.preventDefault();
 		  const formData = new FormData(e.target);
