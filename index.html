@@ -1,114 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
+
 <head>
-<meta charset="UTF-8">
-<script>window.TAG_ID = 'G-55VC70CMV6';</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-55VC70CMV6"></script>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://webtracking-v01.creatio.com/JS/track-cookies.js"></script>
-<script src="https://webtracking-v01.creatio.com/JS/create-object.js"></script>
-<script src="https://webtracking-v01.creatio.com/JS/crt-gtag-with-tracking-form-data-debug.js"></script>
-<script>
+		.bee-form .bee-form-row .bee-field button {
+			font-size: inherit;
+			font-family: inherit
+		}
 
-/* Matomo Code */
-/*var _paq = window._paq = window._paq || [];
-var user_id = landing.contactId.value;
-_paq.push(['setUserId', user_id]);
+		.bee-row-1,
+		.bee-row-1 .bee-row-content {
+			background-repeat: no-repeat
+		}
 
-/* tracker methods like "setCustomDimension" should be called before "trackPageView" 
-_paq.push(['trackPageView']);
-_paq.push(['enableLinkTracking']);
-(function() {
-    var u="https://tscrmdev.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '2']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/tscrmdev.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-})();*/
+		body {
+			background-color: #FFFFFF;
+			color: #000000;
+			font-family: Arial, Helvetica Neue, Helvetica, sans-serif
+		}
 
+		a {
+			color: #0068A5
+		}
 
-/**
-* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-* You can use #id or any other CSS selector that will define the input field explicitly.
-* Example: "Email": "#MyEmailField".
-* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-*/
-var config = {
-    fields: {
-		"FullName": "#name-field", // Name of a contact, submitting a case
-		"PhoneNumber": "#phone-field", // Contact's mobile phone
-		"Email": "#email-field", // Contact's email
-    },
-    contactFields: {
-        "FullName": "#name-field", // Name of a contact
-		"Phone": "#phone-field", // Contact's mobile phone
-		"Email": "#email-field", // Contact's email
-    },
-	customFields: {"WebFormId":"96182d06-cb30-46ae-a5ec-7e8e6b90291f"},
-    landingId: "96182d06-cb30-46ae-a5ec-7e8e6b90291f",
-    serviceUrl: "http://localhost:8081/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    
-    redirectUrl: ""
-    //customFields: {"WebFormId":"6046fc80-2d9e-488b-8e22-1eaa3eb788c4"},
-    //landingId: "6046fc80-2d9e-488b-8e22-1eaa3eb788c4",
-    //serviceUrl: "http://localhost:8082/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    //redirectUrl: ""
-};
-/**
-* The function below creates a object from the submitted data.
-* Bind this function call to the "onSubmit" event of the form or any other elements events.
-* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-*/
-function createObject() {
-    //_paq.push([ function () {
-    //    var visitorId = this.getVisitorId();
-    //    var userId = this.getUserId();
-    //    if (!config.hasOwnProperty("trackingFields")) {
-    //        config.trackingFields = {};
-     //   }
-    //    config.trackingFields.MatomoVisitorId = visitorId;
-    //    config.trackingFields.MatomoUserId = userId;
-    //    landing.createObjectFromLanding(config);
-   //}]);
-	 landing.createObjectFromLanding(config);
-}
-/**
-* The function below inits landing page using URL parameters.
-*/
-function initLanding() {
-    landing.initLanding(config);
-}
-jQuery(document).ready(initLanding);
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<style>
-      @font-face { font-family: JuneBug; src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); } 
-      h1 { font-family: "Montserrat", JuneBug, sans-serif; }
-</style>
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1 {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 500px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 div.label:not(.inline),
+		.bee-row-1 .bee-col-1 .bee-block-2 label:not(.inline),
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button .content,
+		.bee-row-1 .bee-col-1 .bee-block-2 .bee-button-container {
+			text-align: center
+		}
+
+		.bee-button a {
+			text-decoration: none
+		}
+
+		.bee-form .bee-form-row.bee-form-row-multicolumn {
+			display: flex
+		}
+
+		.bee-form .bee-form-row.bee-form-row-multicolumn input:not([type=checkbox]):not([type=radio]),
+		.bee-row-1 .bee-col-1 .bee-block-2 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]) {
+			width: 100%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		@media (max-width:520px) {
+			.bee-form-row-multicolumn {
+				display: block !important
+			}
+
+			.bee-form form {
+				width: 100% !important
+			}
+
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+		}
+
+		.bee-row-1 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 {
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-right: 0 solid transparent;
+			border-top: 0 solid transparent;
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 {
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 {
+			font-family: inherit;
+			font-size: 14px;
+			font-weight: 400;
+			padding: 10px;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-3 {
+			padding: 10px;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 h1 {
+			color: #555555;
+			direction: ltr;
+			font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+			font-size: 23px;
+			font-weight: 700;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 div.label,
+		.bee-row-1 .bee-col-1 .bee-block-2 label {
+			color: #000000;
+			letter-spacing: 0;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 ::-webkit-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 :-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 ::-moz-placeholder {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 :-ms-input-placeholder {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 .bee-field>label:first-child,
+		.bee-row-1 .bee-col-1 .bee-block-2 div.label {
+			padding: 3px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #ffffff;
+			border-bottom: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-radius: 4px;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			color: #000000;
+			padding: 5px;
+			min-height: 38px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #3AAEE0
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 button {
+			background-color: #3AAEE0;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 4px;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #ffffff;
+			letter-spacing: 0;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: 100%
+		}
+	</style>
 </head>
+
 <body>
-<h1>Landing web-page</h1>
-<div>
-    <h2>Contact form</h2>
-	<form method="POST" class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-        Name:<br>
-        <input type="text" name="Name" id="name-field"><br>
-		Email:<br>
-        <input type="text" name="Email" id="email-field"><br><br><br>
-		Phone:<br>
-        <input type="text" name="Phone" id="phone-field"><br>
-		Account:<br>
-        <input type="text" name="Account" id="account-field"><br><br><br>
-		TestParam:<br>
-        <input type="text" name="TestParam" id="testparam-field"><br>
-		Subject:<br>
-        <input type="text" name="Subject" id="subject-field"><br>
-		Symptoms:<br>
-        <input type="text" name="Symptoms" id="symptoms-field">
-		<br><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</div>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1><span class="tinyMce-placeholder">I'm a new title block</span> </h1>
+					</div>
+					<div class="bee-block bee-block-2 bee-form">
+						<form accept-charset="utf-8" class="creatio-form" action="https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c" autocomplete="true" enctype="" method="POST" novalidate target="">
+							<div class="bee-form-row bee-form-row-multicolumn">
+								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Email</label><input id="r0c0m1i1" name="email" type="email"></div>
+								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Password</label><input id="r0c0m1i1" name="password" type="password"></div>
+								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1"> </label>
+									<div class="bee-button-container"><button id="r0c0m1i1" name="submit" type="submit" value="Login">Login</button></div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="bee-block bee-block-3 bee-button">
+						<div style="font-size: 14px; background-color: #3AAEE0; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" class="bee-button-content"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: normal;">Button</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	  const subscribe = document.querySelector('#creatio-form');
+	  subscribe?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const formData = new FormData(e.target);
+		fetch(subscribe.action, { method: 'POST', body: formData });
+	  });
+	</script>
 </body>
+
 </html>
