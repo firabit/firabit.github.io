@@ -264,12 +264,15 @@
 		</div>
 	</div>
 	<script>
-	  const forms = document.querySelector('.creatio-form');
-	  forms?.addEventListener('submit', async (e) => {
-		e.preventDefault();
-		const formData = new FormData(e.target);
-		fetch(subscribe.action, { method: 'POST', body: formData });
-	  });
+	  const formsCollection = document.getElementsByClassName("creatio-form");
+	  for (let i = 0; i < formsCollection.length; i++) {
+	    const form = collection[i];
+	    form?.addEventListener('submit', async (e) => {
+		  e.preventDefault();
+		  const formData = new FormData(e.target);
+		  fetch(form.action, { method: 'POST', body: formData });
+	    });
+	  }
 	</script>
 </body>
 
