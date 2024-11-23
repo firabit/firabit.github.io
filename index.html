@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
-
-<head>
+<html lang=""><head>
 	<title></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
@@ -27,10 +25,6 @@
 			font-family: Arial, Helvetica Neue, Helvetica, sans-serif
 		}
 
-		a {
-			color: #0068A5
-		}
-
 		* {
 			box-sizing: border-box
 		}
@@ -52,20 +46,10 @@
 			flex-basis: 100%
 		}
 
-		.bee-button .content,
 		.bee-row-1 .bee-col-1 .bee-block-2 .bee-button-container {
 			text-align: center
 		}
 
-		.bee-button a {
-			text-decoration: none
-		}
-
-		.bee-form .bee-form-row.bee-form-row-multicolumn {
-			display: flex
-		}
-
-		.bee-form .bee-form-row.bee-form-row-multicolumn input:not([type=checkbox]):not([type=radio]),
 		.bee-row-1 .bee-col-1 .bee-block-2 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]) {
 			width: 100%
 		}
@@ -88,26 +72,7 @@
 			flex-grow: 1
 		}
 
-		.bee-form input[type=color] {
-			border: none;
-			height: 38px
-		}
-
-		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
-			margin: 0;
-			padding: 2px
-		}
-
-		.bee-form input[type=color]::-webkit-color-swatch {
-			margin: 0;
-			padding: 0
-		}
-
 		@media (max-width:520px) {
-			.bee-form-row-multicolumn {
-				display: block !important
-			}
-
 			.bee-form form {
 				width: 100% !important
 			}
@@ -118,14 +83,11 @@
 		}
 
 		.bee-row-1 .bee-row-content {
+			border-radius: 0;
 			color: #000000
 		}
 
 		.bee-row-1 .bee-col-1 {
-			border-bottom: 0 solid transparent;
-			border-left: 0 solid transparent;
-			border-right: 0 solid transparent;
-			border-top: 0 solid transparent;
 			padding-bottom: 5px;
 			padding-top: 5px
 		}
@@ -139,11 +101,6 @@
 			font-family: inherit;
 			font-size: 14px;
 			font-weight: 400;
-			padding: 10px;
-			text-align: center
-		}
-
-		.bee-row-1 .bee-col-1 .bee-block-3 {
 			padding: 10px;
 			text-align: center
 		}
@@ -224,6 +181,13 @@
 			width: 100%
 		}
 	</style>
+	<script src="http://ts1-core-dev28:8086/VVyshnevetsky/crt-webhook.js"></script>
+	<script>
+		crtWebhook.config = {
+			apiKey = '6ff8e115-c623-43f3-96bc-9c649a37296c',
+			pageId = 'dfa8e2d6-dd11-4074-a997-ffdeb1c499c6'
+		};
+	</script>
 </head>
 
 <body>
@@ -232,21 +196,7 @@
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
 					<div class="bee-block bee-block-1 bee-heading">
-						<h1><span class="tinyMce-placeholder">I'm a new title block</span> </h1>
-					</div>
-					<div class="bee-block bee-block-2 bee-form">
-						<form accept-charset="utf-8" class="creatio-form" action="https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c" autocomplete="true" enctype="" method="POST" novalidate target="">
-							<div class="bee-form-row bee-form-row-multicolumn">
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Email</label><input id="r0c0m1i1" name="email" type="email"></div>
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1">Password</label><input id="r0c0m1i1" name="password" type="password"></div>
-								<div class="bee-field bee-field-r0c0m1i1"><label for="r0c0m1i1"> </label>
-									<div class="bee-button-container"><button id="r0c0m1i1" name="submit" type="submit" value="Login">Login</button></div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="bee-block bee-block-3 bee-button">
-						<div style="font-size: 14px; background-color: #3AAEE0; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 4px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" class="bee-button-content"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: normal;">Button</span></div>
+						<h1><span class="tinyMce-placeholder">New title block</span> </h1>
 					</div>
 					<div class="bee-block bee-block-2 bee-form">
 						<form accept-charset="utf-8" action="" autocomplete="true" enctype="" method="POST" novalidate="" target="">
@@ -271,19 +221,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-	  const formAction='https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c';
-	  const formsCollection = document.getElementsByClassName("bee-form");
-	  for (let i = 0; i < formsCollection.length; i++) {
-	    const form = formsCollection[i].firstElementChild;
-	    form?.addEventListener('submit', async (e) => {
-		  e.preventDefault();
-		  const formData = new FormData(e.target);
-		  formData.append("pageId", "dfa8e2d6-dd11-4074-a997-ffdeb1c499c6");
-		  fetch(formAction, { method: 'POST', body: formData });
-	    });
-	  }
-	</script>
-</body>
 
-</html>
+
+</body></html>
