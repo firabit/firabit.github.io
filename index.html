@@ -222,7 +222,7 @@
 	<script>
 		const formsCollection = document.getElementsByTagName('form');
 		for (let i = 0; i < formsCollection.length; i++) {
-			const form = formsCollection[i].firstElementChild;
+			const form = formsCollection[i];
 			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
 				const formData = new FormData(e.target);
