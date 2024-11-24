@@ -183,10 +183,8 @@
 	</style>
 	<script src="https://v-vyshnevetsky.tscrm.com:1028/crt-webhook.js"></script>
 	<script>
-		crtWebhook.config = {
-			"apiKey": '6ff8e115-c623-43f3-96bc-9c649a37296c',
-			"pageId": 'dfa8e2d6-dd11-4074-a997-ffdeb1c499c6'
-		};
+		crtWebhook.targetUrl = 'https://webhooks.creatio.com/webhooks/6ff8e115-c623-43f3-96bc-9c649a37296c';
+		crtWebhook.setParameter("PageId", 'dfa8e2d6-dd11-4074-a997-ffdeb1c499c6');
 	</script>
 </head>
 
@@ -221,6 +219,15 @@
 			</div>
 		</div>
 	</div>
-
-
+	<script>
+		const formsCollection = document.getElementsByClassName('bee-form');
+		for (let i = 0; i < formsCollection.length; i++) {
+			const form = formsCollection[i].firstElementChild;
+			form?.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				const formData = new FormData(e.target);
+				crtWebhook.sendForm(formData);
+			});
+		}
+	</script>
 </body></html>
