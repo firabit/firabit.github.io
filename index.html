@@ -221,14 +221,13 @@
 	</div>
 	<script>
 		const formsCollection = document.getElementsByTagName('form');
-		//for (let i = 0; i < formsCollection.length; i++) {
-		formsCollection.forEach(form => {
-			//const form = formsCollection[i].firstElementChild;
+		for (let i = 0; i < formsCollection.length; i++) {
+			const form = formsCollection[i].firstElementChild;
 			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
 				const formData = new FormData(e.target);
 				crtFormWebhook.send(formData);
 			});
-		});
+		}
 	</script>
 </body></html>
