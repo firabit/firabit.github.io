@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&amp;display=swap" rel="stylesheet" type="text/css">
+	<style>
+		body {
+			background-color: #FFFFFF;
+			color: #000000;
+			font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif
+		}
+
+		a {
+			color: #0068A5
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		.bee-row {
+			position: relative
+		}
+
+		.bee-row-content {
+			max-width: 1440px;
+			margin: 0 auto;
+			display: flex;
+			position: relative
+		}
+
+		.bee-row-content .bee-col-w1 {
+			flex-basis: 8.3333333333%
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 16.6666666667%
+		}
+
+		.bee-row-content .bee-col-w3 {
+			flex-basis: 25%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 66.6666666667%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field button {
+			font-family: inherit;
+			font-size: inherit;
+			cursor: pointer
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-row-1 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1 {
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-right: 0 solid transparent;
+			border-top: 0 solid transparent;
+			padding-bottom: 20px;
+			padding-top: 20px
+		}
+
+		.bee-row-2 {
+			background-color: #ff4013;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 {
+			font-family: inherit;
+			font-size: 14px;
+			font-weight: 400;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-2 {
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-3 .bee-col-1 {
+			padding-bottom: 20px;
+			padding-top: 20px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-1 {
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-7 {
+			background-color: #d3d3d3;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-1 {
+			text-align: center;
+			padding: 20px;
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-2 {
+			padding: 20px;
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2 h1 {
+			color: #0d2e4e;
+			direction: ltr;
+			font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-2 .bee-block-1 h2 {
+			color: #ffffff;
+			direction: ltr;
+			font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 150%;
+			text-align: center
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-1 h1 {
+			color: #0d2e4e;
+			direction: ltr;
+			font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-size: 27px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 label,
+		.bee-row-2 .bee-col-3 .bee-block-1 div.label {
+			color: #ffffff;
+			letter-spacing: 0;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 div.label,
+		.bee-row-2 .bee-col-3 .bee-block-1 .bee-field>label:first-child {
+			padding: 3px
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: transparent;
+			border-bottom: 1px solid #ffffff;
+			border-left: 1px solid #ffffff;
+			border-radius: 4px;
+			border-right: 1px solid #ffffff;
+			border-top: 1px solid #ffffff;
+			color: #000000;
+			min-height: 38px;
+			padding: 5px;
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #3AAEE0
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 button {
+			background-color: #ffffff;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 4px;
+			border-right: 0 solid transparent;
+			border-top: 0 solid transparent;
+			color: #0d2e4e;
+			letter-spacing: 0;
+			line-height: 200%;
+			width: 100%;
+			padding: 5px 20px;
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 .bee-button-container {
+			padding-top: 20px;
+			text-align: center
+		}
+
+		body,
+		p,
+		h1,
+		h2,
+		h3 {
+			margin: 0
+		}
+
+		.bee-row-content .bee-col-w12,
+		.bee-row-2 .bee-col-3 .bee-block-1 label:not(.inline),
+		.bee-row-2 .bee-col-3 .bee-block-1 div.label:not(.inline) {
+			flex-basis: 100%
+		}
+
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-2 .bee-block-1,
+		.bee-row-4 .bee-col-3 .bee-block-1,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-5 .bee-col-2 .bee-block-1,
+		.bee-row-5 .bee-col-3 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-3 .bee-block-1,
+		.bee-row-2 .bee-col-3 .bee-block-1 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]) {
+			width: 100%
+		}
+
+		.bee-text {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1 .bee-col-2,
+		.bee-row-1 .bee-col-3,
+		.bee-row-7 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1,
+		.bee-row-1 .bee-col-2 .bee-block-3 {
+			width: 100%;
+			padding: 20px;
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2,
+		.bee-row-2 .bee-col-2 .bee-block-1 {
+			text-align: center;
+			width: 100%;
+			padding: 20px;
+		}
+
+		.bee-row-2 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000
+		}
+
+		.bee-row-2 .bee-col-1,
+		.bee-row-2 .bee-col-2,
+		.bee-row-2 .bee-col-3,
+		.bee-row-2 .bee-col-4 {
+			padding-bottom: 20px;
+			padding-top: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6 {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-4 .bee-col-1,
+		.bee-row-4 .bee-col-2,
+		.bee-row-4 .bee-col-3 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 60px 40px 40px 40px;
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-2,
+		.bee-row-4 .bee-col-2 .bee-block-2,
+		.bee-row-4 .bee-col-3 .bee-block-2,
+		.bee-row-5 .bee-col-1 .bee-block-2,
+		.bee-row-5 .bee-col-2 .bee-block-2,
+		.bee-row-5 .bee-col-3 .bee-block-2,
+		.bee-row-6 .bee-col-1 .bee-block-2,
+		.bee-row-6 .bee-col-2 .bee-block-2,
+		.bee-row-6 .bee-col-3 .bee-block-2 {
+			text-align: center;
+			width: 100%;
+			padding: 10px;
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-3,
+		.bee-row-4 .bee-col-2 .bee-block-3,
+		.bee-row-4 .bee-col-3 .bee-block-3,
+		.bee-row-5 .bee-col-1 .bee-block-3,
+		.bee-row-5 .bee-col-2 .bee-block-3,
+		.bee-row-5 .bee-col-3 .bee-block-3,
+		.bee-row-6 .bee-col-1 .bee-block-3,
+		.bee-row-6 .bee-col-2 .bee-block-3,
+		.bee-row-6 .bee-col-3 .bee-block-3 {
+			padding: 10px;
+		}
+
+		.bee-row-5 .bee-col-1,
+		.bee-row-5 .bee-col-2,
+		.bee-row-5 .bee-col-3 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 40px;
+		}
+
+		.bee-row-6 .bee-col-1,
+		.bee-row-6 .bee-col-2,
+		.bee-row-6 .bee-col-3 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 40px 40px 60px 40px;
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-2 h3,
+		.bee-row-4 .bee-col-2 .bee-block-2 h3,
+		.bee-row-4 .bee-col-3 .bee-block-2 h3,
+		.bee-row-5 .bee-col-1 .bee-block-2 h3,
+		.bee-row-5 .bee-col-2 .bee-block-2 h3,
+		.bee-row-5 .bee-col-3 .bee-block-2 h3,
+		.bee-row-6 .bee-col-1 .bee-block-2 h3,
+		.bee-row-6 .bee-col-2 .bee-block-2 h3,
+		.bee-row-6 .bee-col-3 .bee-block-2 h3 {
+			color: #ff4013;
+			direction: ltr;
+			font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1::-webkit-input-placeholder,
+		.bee-row-2 .bee-col-3 .bee-block-1:-moz-placeholder,
+		.bee-row-2 .bee-col-3 .bee-block-1::-moz-placeholder,
+		.bee-row-2 .bee-col-3 .bee-block-1:-ms-input-placeholder {
+			color: #000000
+		}
+
+		@media (max-width: 768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 img {
+				float: none !important;
+				margin: 0 auto !important
+			}
+
+			.bee-row-2 .bee-col-2 .bee-block-1 {
+				padding: 10px;
+			}
+
+			.bee-mobile_hide {
+				display: none
+			}
+
+			.bee-row-1 .bee-col-1,
+			.bee-row-1 .bee-col-2,
+			.bee-row-1 .bee-col-3,
+			.bee-row-2 .bee-col-1,
+			.bee-row-2 .bee-col-2,
+			.bee-row-2 .bee-col-3,
+			.bee-row-2 .bee-col-4,
+			.bee-row-3 .bee-col-1 {
+				padding: 10px 0 !important;
+			}
+
+			.bee-row-4 .bee-col-1,
+			.bee-row-4 .bee-col-2,
+			.bee-row-4 .bee-col-3,
+			.bee-row-5 .bee-col-1,
+			.bee-row-5 .bee-col-2,
+			.bee-row-5 .bee-col-3,
+			.bee-row-6 .bee-col-1,
+			.bee-row-1 .bee-col-2 .bee-block-1,
+			.bee-row-7 .bee-col-1 .bee-block-1,
+			.bee-row-7 .bee-col-1 .bee-block-2 {
+				padding: 10px !important;
+			}
+
+			.bee-row-6 .bee-col-2,
+			.bee-row-6 .bee-col-3 {
+				padding: 5px 0 !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w2">
+					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="images/01-Marketing-logo.svg" style="max-width:443px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h1><span class="tinyMce-placeholder">AI-Native omnichannel marketing platform to accelerate lead-to-revenue</span> </h1>
+					</div>
+					<div class="bee-block bee-block-3 bee-image"><img class="bee-center bee-autowidth" src="images/01-Marketing-main-Screen1x.png" style="max-width:920px;" alt="" title=""></div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w2">
+					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-2">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w1">
+					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h2><span class="tinyMce-placeholder">Gain a holistic customer view, run omnichannel marketing campaigns, orchestrate customer journeys, streamline digital campaigns, email and event marketing, orchestrate team collaboration.</span> </h2>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w3">
+					<div class="bee-block bee-block-1 bee-form">
+						
+					<div id="crt-embedded-form-c1cc949b-9734-41bd-bec8-c88ab9cf0c2b"></div>
+					<script src="https://d3gyzugod9s6e6.cloudfront.net/JS/crt-embedded-form-loader.js"
+						data-crt-embedded-form-url="https://forms.creatio.my/c1cc949b-9734-41bd-bec8-c88ab9cf0c2b/index.html"
+						data-crt-embedded-form-target="#crt-embedded-form-c1cc949b-9734-41bd-bec8-c88ab9cf0c2b"></script>
+					</div>
+					<div class="bee-block bee-block-2 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;"><span style="font-size: 10px; line-height: 12px;">By submitting this form, you confirm that you agree to the storing and processing of your personal data by Our Company as described in the <a href="https://www.bpmonline.com/privacy-policy" target="_blank" plerdy-tracking-id="29314449401" style="text-decoration: underline; color: #ffffff;" rel="noopener">Privacy Policy</a>.</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-4 bee-col-w2">
+					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-3">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1>Achieve marketing excellence with more composable capabilities </h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-4">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-fixedwidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/sales/05-Sales-04-ai%402x.png" style="max-width:380px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">PREDICTIVE AI/ML TOOLS</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Intelligent lead and customer engagement scoring, NBA/NBO recommendations, lookalike audience creation, sentiment analysis, and more.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-02-segmentation%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">SEGMENTATION</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Flexible capabilities to segment audiences using multiple criteria and run more targeted and effective campaigns.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-03-website%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">WEBSITE BEHAVIOR TRACKING</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Comprehensive functionality to track visitor behavior on your website, as well as identify lead generation channels and sources.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-5">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-fixedwidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-04-workflow%402x.png" style="max-width:380px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">AI-NATIVE WORKFLOW MANAGEMENT</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">End-to-end AI-Native workflow automation and monitoring tools to streamline a wide range of marketing processes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-05-collateral%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">MARKETING MATERIALS MANAGEMENT</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Robust and intuitive tools to store all of your marketing collateral in one place, easily share and distribute new content, and streamline approvals.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-01-campaign%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">PROJECT MANAGEMENT</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Consolidated digital workplace to plan, budget, execute, and track marketing campaigns and projects of any complexity.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-6">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-fixedwidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-06-performance%402x.png" style="max-width:380px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">PERFORMANCE MANAGEMENT</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Rich marketing reporting with powerful dashboards that you can build without coding to track marketing KPIs in real-time.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-07-%D0%BEmnichannel%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">OMNICHANNEL COMMUNICATIONS</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">Complete set of popular communication options to manage customer and team communications from one place, track history, and enrich customer data.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img class="bee-center bee-autowidth" src="https://d3a7ykdi65m4cy.cloudfront.net/en/s3fs-public/pages/products/marketing/05-Marketing-07-productivity%402x.png" style="max-width:400px;" alt="" title=""></div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder">PRODUCTIVITY</span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="font-size: 14px; line-height: 16px;">All-in-one marketing productivity capabilities to easily manage tasks and meetings, arrange communications, and organize team collaboration.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-7">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-social">
+						<div class="content"><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.facebook.com/CreatioCompany" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/facebook@2x.png" alt="Facebook" title="Facebook"></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.linkedin.com/company/creatioglobal" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/linkedin@2x.png" alt="LinkedIn" title="LinkedIn"></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.youtube.com/c/creatio" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/youtube@2x.png" alt="YouTube" title="YouTube"></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.twitter.com/Creatio_Global" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/twitter@2x.png" alt="X" title="X"></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.instagram.com/creatio_official" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/instagram@2x.png" alt="Instagram" title="Instagram"></a></span></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-text">
+						<div style="font-size: 14px; line-height: 120%; font-family: inherit; color: #0d2e4e;" class="bee-text-content">
+							<p style="text-align: center; line-height: 14px;">© 2025 Our Company. All rights reserved. <a target="_blank" href="https://www.creatio.com/sites/default/files/2019-12/FREE_TRIAL_TERMS_AND_CONDITIONS_CREATIO.pdf" plerdy-tracking-id="11645873701" style="text-decoration: underline; color: #0d2e4e;" rel="noopener">Free trial terms</a> | &nbsp;<a href="https://www.creatio.com/privacy-policy" plerdy-tracking-id="10013210801" style="text-decoration: underline; color: #0d2e4e;">Privacy Policy</a>&nbsp; | &nbsp;<a href="https://www.creatio.com/GDPR" plerdy-tracking-id="49082103701" style="text-decoration: underline; color: #0d2e4e;">GDPR</a>&nbsp; | &nbsp;<a href="https://www.creatio.com/sitemap" plerdy-tracking-id="35313431101" style="text-decoration: underline; color: #0d2e4e;">Site Map</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
